@@ -1,0 +1,134 @@
+/* Basic Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body styling */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #222;
+    /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+
+/* Game container styling */
+
+.game-container {
+    text-align: center;
+    background-color: #333;
+    /* Darker background for the container */
+    border-radius: 10px;
+    padding: 30px;
+    width: 400px;
+}
+
+
+/* Game title */
+
+.game-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+
+/* Status display */
+
+.status {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+
+/* Board grid */
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+
+/* Cells styling */
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #555;
+}
+
+
+/* X and O styling */
+
+.cell.x {
+    color: #fff;
+    font-weight: bold;
+}
+
+.cell.o {
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/* Reset button */
+
+.reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #666;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reset-button:hover {
+    background-color: #777;
+}
+
+
+/* Animation for cell clicks */
+
+@keyframes click-animation {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.cell.clicked {
+    animation: click-animation 0.3s ease-in-out;
+}
